@@ -1,0 +1,1141 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/internetErik/gulp-atomicscss"
+
+    >gulp-atomicscss (v0.4.0)</a>
+</h1>
+<h4>A plugin for Gulp that takes text, scans for class attributes and generates an scss file from the classes</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-atomicscss">module gulp-atomicscss</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-atomicscss.gulp-atomicscss">
+            function <span class="apidocSignatureSpan"></span>gulp-atomicscss
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp-atomicscss.</span>atomBuilder</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp-atomicscss.</span>atomParser</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp-atomicscss.</span>atomicscss</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp-atomicscss.</span>cssBuilder</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp-atomicscss.</span>emmet</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp-atomicscss.</span>emmetWrapper</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-atomicscss.atomBuilder">module gulp-atomicscss.atomBuilder</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-atomicscss.atomBuilder.buildAtoms">
+            function <span class="apidocSignatureSpan">gulp-atomicscss.atomBuilder.</span>buildAtoms
+            <span class="apidocSignatureSpan">(atoms)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-atomicscss.atomBuilder.buildMolecules">
+            function <span class="apidocSignatureSpan">gulp-atomicscss.atomBuilder.</span>buildMolecules
+            <span class="apidocSignatureSpan">(molecules)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-atomicscss.atomParser">module gulp-atomicscss.atomParser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-atomicscss.atomParser.getAtoms">
+            function <span class="apidocSignatureSpan">gulp-atomicscss.atomParser.</span>getAtoms
+            <span class="apidocSignatureSpan">(atomArray)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-atomicscss.atomParser.getMolecules">
+            function <span class="apidocSignatureSpan">gulp-atomicscss.atomParser.</span>getMolecules
+            <span class="apidocSignatureSpan">(moleculeArray)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-atomicscss.atomParser.parseFile">
+            function <span class="apidocSignatureSpan">gulp-atomicscss.atomParser.</span>parseFile
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-atomicscss.atomicscss">module gulp-atomicscss.atomicscss</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-atomicscss.atomicscss.createFileText">
+            function <span class="apidocSignatureSpan">gulp-atomicscss.atomicscss.</span>createFileText
+            <span class="apidocSignatureSpan">(atoms, molecules, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-atomicscss.atomicscss.parseAllFiles">
+            function <span class="apidocSignatureSpan">gulp-atomicscss.atomicscss.</span>parseAllFiles
+            <span class="apidocSignatureSpan">(files, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-atomicscss.cssBuilder">module gulp-atomicscss.cssBuilder</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-atomicscss.cssBuilder.generateAtomCss">
+            function <span class="apidocSignatureSpan">gulp-atomicscss.cssBuilder.</span>generateAtomCss
+            <span class="apidocSignatureSpan">(atom)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-atomicscss.cssBuilder.generateMoleculeCss">
+            function <span class="apidocSignatureSpan">gulp-atomicscss.cssBuilder.</span>generateMoleculeCss
+            <span class="apidocSignatureSpan">(molecule)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-atomicscss.emmet">module gulp-atomicscss.emmet</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-atomicscss.emmet.defaultProfile">
+            function <span class="apidocSignatureSpan">gulp-atomicscss.emmet.</span>defaultProfile
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-atomicscss.emmet.defaultSyntax">
+            function <span class="apidocSignatureSpan">gulp-atomicscss.emmet.</span>defaultSyntax
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-atomicscss.emmet.define">
+            function <span class="apidocSignatureSpan">gulp-atomicscss.emmet.</span>define
+            <span class="apidocSignatureSpan">(name, factory)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-atomicscss.emmet.exec">
+            function <span class="apidocSignatureSpan">gulp-atomicscss.emmet.</span>exec
+            <span class="apidocSignatureSpan">(fn, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-atomicscss.emmet.expandAbbreviation">
+            function <span class="apidocSignatureSpan">gulp-atomicscss.emmet.</span>expandAbbreviation
+            <span class="apidocSignatureSpan">(abbr, syntax, profile, contextNode)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-atomicscss.emmet.extend">
+            function <span class="apidocSignatureSpan">gulp-atomicscss.emmet.</span>extend
+            <span class="apidocSignatureSpan">(protoProps, classProps)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-atomicscss.emmet.log">
+            function <span class="apidocSignatureSpan">gulp-atomicscss.emmet.</span>log
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-atomicscss.emmet.require">
+            function <span class="apidocSignatureSpan">gulp-atomicscss.emmet.</span>require
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-atomicscss.emmet.setModuleLoader">
+            function <span class="apidocSignatureSpan">gulp-atomicscss.emmet.</span>setModuleLoader
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp-atomicscss.</span>emmet</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-atomicscss.emmetWrapper">module gulp-atomicscss.emmetWrapper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-atomicscss.emmetWrapper.getStyle">
+            function <span class="apidocSignatureSpan">gulp-atomicscss.emmetWrapper.</span>getStyle
+            <span class="apidocSignatureSpan">(style)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-atomicscss" id="apidoc.module.gulp-atomicscss">module gulp-atomicscss</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-atomicscss.gulp-atomicscss" id="apidoc.element.gulp-atomicscss.gulp-atomicscss">
+        function <span class="apidocSignatureSpan"></span>gulp-atomicscss
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gulp-atomicscss = function () {
+	&#x22;use strict&#x22;;
+	
+	function atomicCss(file, enc, callback) {
+		var contents,
+			that = this;
+
+		function parseFiles(files) {
+			atomic.parseAllFiles(files, createCss);
+		}
+
+		function createCss(atoms, molecules) {
+			atomic.createFileText(atoms, molecules, function(css) {
+				file.contents = new Buffer(css);
+
+				that.push(file);
+			});
+		}
+
+		// Do nothing if no contents
+		if (file.isNull()) {
+			this.push(file);
+			return callback();
+		}
+
+		if (file.isStream()) {
+			this.emit(&#x22;error&#x22;,
+				new gutil.PluginError(&#x22;gulp-atomicCss&#x22;, &#x22;Stream content is not supported&#x22;));
+			return callback();
+		}
+
+		if (file.isBuffer()) {
+			contents = file.contents.toString(&#x27;utf8&#x27;);
+
+			parseFiles([contents]);
+		}
+
+		return callback();
+	}
+
+	return through.obj(atomicCss);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-atomicscss.atomBuilder" id="apidoc.module.gulp-atomicscss.atomBuilder">module gulp-atomicscss.atomBuilder</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-atomicscss.atomBuilder.buildAtoms" id="apidoc.element.gulp-atomicscss.atomBuilder.buildAtoms">
+        function <span class="apidocSignatureSpan">gulp-atomicscss.atomBuilder.</span>buildAtoms
+        <span class="apidocSignatureSpan">(atoms)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function buildAtoms(atoms) {
+		return atoms.map(function (atom) { return Atom(atom); });
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		for(i = 0; i &#x3c; parsed.length; i += 1) {
+			atoms = _.union(atoms, atomParser.getAtoms(parsed[i]));
+			molecules = _.union(molecules, atomParser.getMolecules(parsed[i]));
+		}
+
+		//filter out things we should ignore
+		atoms = atoms.filter(function (ele) { return (ele[0] !== &#x27;-&#x27; &#x26;&#x26; ele[0] !==&#x27;_&#x27; &#x26;&#x26; ele !== &#
+x27; &#x27; &#x26;&#x26; ele !== &#x27;&#x27;); })
+		atoms = atomBuilder.<span class="apidocCodeKeywordSpan">buildAtoms</span>(atoms);
+
+		molecules = atomBuilder.buildMolecules(molecules);
+
+		callback(atoms, molecules);
+	}
+
+	as.createFileText = function createFileText(atoms, molecules, callback) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-atomicscss.atomBuilder.buildMolecules" id="apidoc.element.gulp-atomicscss.atomBuilder.buildMolecules">
+        function <span class="apidocSignatureSpan">gulp-atomicscss.atomBuilder.</span>buildMolecules
+        <span class="apidocSignatureSpan">(molecules)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function buildMolecules(molecules) {
+		var names = [];
+
+		molecules = molecules.map(function (molecule) { return Molecule(molecule); });
+
+		return molecules;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			molecules = _.union(molecules, atomParser.getMolecules(parsed[i]));
+		}
+
+		//filter out things we should ignore
+		atoms = atoms.filter(function (ele) { return (ele[0] !== &#x27;-&#x27; &#x26;&#x26; ele[0] !==&#x27;_&#x27; &#x26;&#x26; ele !== &#
+x27; &#x27; &#x26;&#x26; ele !== &#x27;&#x27;); })
+		atoms = atomBuilder.buildAtoms(atoms);
+
+		molecules = atomBuilder.<span class="apidocCodeKeywordSpan">buildMolecules</span>(molecules);
+
+		callback(atoms, molecules);
+	}
+
+	as.createFileText = function createFileText(atoms, molecules, callback) {
+		var css = &#x22;&#x22;;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-atomicscss.atomParser" id="apidoc.module.gulp-atomicscss.atomParser">module gulp-atomicscss.atomParser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-atomicscss.atomParser.getAtoms" id="apidoc.element.gulp-atomicscss.atomParser.getAtoms">
+        function <span class="apidocSignatureSpan">gulp-atomicscss.atomParser.</span>getAtoms
+        <span class="apidocSignatureSpan">(atomArray)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getAtoms(atomArray) {
+		var atoms = [],
+			i;
+
+		for(i = 0; i &#x3c; atomArray.length; i += 1) {
+			atoms = atoms.concat(parseClassesFromAttribute(atomArray[i]));
+		}
+
+		return _.uniq(atoms).sort();
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			atoms = [],
+			molecules = [],
+			i;
+
+		parsed = files.map(function (file) { return atomParser.parseFile(file); });
+
+		for(i = 0; i &#x3c; parsed.length; i += 1) {
+			atoms = _.union(atoms, atomParser.<span class="apidocCodeKeywordSpan">getAtoms</span>(parsed[i]));
+			molecules = _.union(molecules, atomParser.getMolecules(parsed[i]));
+		}
+
+		//filter out things we should ignore
+		atoms = atoms.filter(function (ele) { return (ele[0] !== &#x27;-&#x27; &#x26;&#x26; ele[0] !==&#x27;_&#x27; &#x26;&#x26; ele !== &#
+x27; &#x27; &#x26;&#x26; ele !== &#x27;&#x27;); })
+		atoms = atomBuilder.buildAtoms(atoms);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-atomicscss.atomParser.getMolecules" id="apidoc.element.gulp-atomicscss.atomParser.getMolecules">
+        function <span class="apidocSignatureSpan">gulp-atomicscss.atomParser.</span>getMolecules
+        <span class="apidocSignatureSpan">(moleculeArray)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getMolecules(moleculeArray) {
+		var atoms = [],
+			molecules = [],
+			start = -1;
+
+		atoms = moleculeArray
+				.filter(function (ele) { return (ele.indexOf(&#x27; _&#x27;) &#x3e; -1 || ele.indexOf(&#x27;&#x22;_&#x27;) &#x3e; -1); })
+				.map(parseClassesFromAttribute)
+				.filter(function (molecule){ return molecule.length &#x3e; 1 });
+		
+		atoms.map(function (molecule){
+			start = -1;
+			molecule.map(function (atom, i){
+				if((atom[0] === &#x27;_&#x27; &#x26;&#x26; start !== -1) || i === molecule.length-1 ) {
+					molecules.push(
+							(i === molecule.length-1) ?
+								molecule.slice(start) :
+								molecule.slice(start, i)
+							);
+					start = i;
+				}
+				else if(atom[0] === &#x27;_&#x27;){
+					start = i;
+				}
+			});
+		});
+		
+		//filter duplicates
+		return filterDuplicateMolecules(molecules);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			molecules = [],
+			i;
+
+		parsed = files.map(function (file) { return atomParser.parseFile(file); });
+
+		for(i = 0; i &#x3c; parsed.length; i += 1) {
+			atoms = _.union(atoms, atomParser.getAtoms(parsed[i]));
+			molecules = _.union(molecules, atomParser.<span class="apidocCodeKeywordSpan">getMolecules</span>(parsed[i]));
+		}
+
+		//filter out things we should ignore
+		atoms = atoms.filter(function (ele) { return (ele[0] !== &#x27;-&#x27; &#x26;&#x26; ele[0] !==&#x27;_&#x27; &#x26;&#x26; ele !== &#
+x27; &#x27; &#x26;&#x26; ele !== &#x27;&#x27;); })
+		atoms = atomBuilder.buildAtoms(atoms);
+
+		molecules = atomBuilder.buildMolecules(molecules);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-atomicscss.atomParser.parseFile" id="apidoc.element.gulp-atomicscss.atomParser.parseFile">
+        function <span class="apidocSignatureSpan">gulp-atomicscss.atomParser.</span>parseFile
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parseFile(file) {
+		return file.match(/class[ \t]*=[ \t]*&#x22;[^&#x22;]+&#x22; */g);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	as.parseAllFiles = function parseAllFiles(files, callback) {
+		var parsed = [],
+			atoms = [],
+			molecules = [],
+			i;
+
+		parsed = files.map(function (file) { return atomParser.<span class="apidocCodeKeywordSpan">parseFile</span>(file); });
+
+		for(i = 0; i &#x3c; parsed.length; i += 1) {
+			atoms = _.union(atoms, atomParser.getAtoms(parsed[i]));
+			molecules = _.union(molecules, atomParser.getMolecules(parsed[i]));
+		}
+
+		//filter out things we should ignore
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-atomicscss.atomicscss" id="apidoc.module.gulp-atomicscss.atomicscss">module gulp-atomicscss.atomicscss</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-atomicscss.atomicscss.createFileText" id="apidoc.element.gulp-atomicscss.atomicscss.createFileText">
+        function <span class="apidocSignatureSpan">gulp-atomicscss.atomicscss.</span>createFileText
+        <span class="apidocSignatureSpan">(atoms, molecules, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createFileText(atoms, molecules, callback) {
+		var css = &#x22;&#x22;;
+
+		css = atoms.reduce(function (p, c) { return p + cssBuilder.generateAtomCss(c) + &#x27;\n&#x27;; }, &#x27;&#x27;);
+
+		molecules.map(function (molecule){
+			css += cssBuilder.generateMoleculeCss(molecule);
+		});
+
+		callback(css);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			that = this;
+
+		function parseFiles(files) {
+			atomic.parseAllFiles(files, createCss);
+		}
+
+		function createCss(atoms, molecules) {
+			atomic.<span class="apidocCodeKeywordSpan">createFileText</span>(atoms, molecules, function(css) {
+				file.contents = new Buffer(css);
+
+				that.push(file);
+			});
+		}
+
+		// Do nothing if no contents
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-atomicscss.atomicscss.parseAllFiles" id="apidoc.element.gulp-atomicscss.atomicscss.parseAllFiles">
+        function <span class="apidocSignatureSpan">gulp-atomicscss.atomicscss.</span>parseAllFiles
+        <span class="apidocSignatureSpan">(files, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parseAllFiles(files, callback) {
+		var parsed = [],
+			atoms = [],
+			molecules = [],
+			i;
+
+		parsed = files.map(function (file) { return atomParser.parseFile(file); });
+
+		for(i = 0; i &#x3c; parsed.length; i += 1) {
+			atoms = _.union(atoms, atomParser.getAtoms(parsed[i]));
+			molecules = _.union(molecules, atomParser.getMolecules(parsed[i]));
+		}
+
+		//filter out things we should ignore
+		atoms = atoms.filter(function (ele) { return (ele[0] !== &#x27;-&#x27; &#x26;&#x26; ele[0] !==&#x27;_&#x27; &#x26;&#x26; ele !== &#x27; &#x27; &#x26;&#x26; ele !== &#x27;&#x27;); })
+		atoms = atomBuilder.buildAtoms(atoms);
+
+		molecules = atomBuilder.buildMolecules(molecules);
+
+		callback(atoms, molecules);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	&#x22;use strict&#x22;;
+	
+	function atomicCss(file, enc, callback) {
+		var contents,
+			that = this;
+
+		function parseFiles(files) {
+			atomic.<span class="apidocCodeKeywordSpan">parseAllFiles</span>(files, createCss);
+		}
+
+		function createCss(atoms, molecules) {
+			atomic.createFileText(atoms, molecules, function(css) {
+				file.contents = new Buffer(css);
+
+				that.push(file);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-atomicscss.cssBuilder" id="apidoc.module.gulp-atomicscss.cssBuilder">module gulp-atomicscss.cssBuilder</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-atomicscss.cssBuilder.generateAtomCss" id="apidoc.element.gulp-atomicscss.cssBuilder.generateAtomCss">
+        function <span class="apidocSignatureSpan">gulp-atomicscss.cssBuilder.</span>generateAtomCss
+        <span class="apidocSignatureSpan">(atom)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function generateAtomCss(atom) {
+		var css = toCssClass(atom.className, atom.pseudo, atom.style);
+
+		if(atom.mediaQuery !== &#x27;&#x27;) {
+			css = wrapInMediaQuery(css, atom.mediaQuery);
+		}
+
+		return css;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+		callback(atoms, molecules);
+	}
+
+	as.createFileText = function createFileText(atoms, molecules, callback) {
+		var css = &#x22;&#x22;;
+
+		css = atoms.reduce(function (p, c) { return p + cssBuilder.<span class="apidocCodeKeywordSpan">generateAtomCss</span>(c) + &#x27
+;\n&#x27;; }, &#x27;&#x27;);
+
+		molecules.map(function (molecule){
+			css += cssBuilder.generateMoleculeCss(molecule);
+		});
+
+		callback(css);
+	}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-atomicscss.cssBuilder.generateMoleculeCss" id="apidoc.element.gulp-atomicscss.cssBuilder.generateMoleculeCss">
+        function <span class="apidocSignatureSpan">gulp-atomicscss.cssBuilder.</span>generateMoleculeCss
+        <span class="apidocSignatureSpan">(molecule)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function generateMoleculeCss(molecule) {
+		var css = &#x27;&#x27;,
+			atoms = [],
+			pseudoAtoms = [],
+			mediaAtoms = [];
+
+	//create css for atoms that have no pseudo-class or media query
+		atoms = molecule.atoms.filter(function (atom){
+			return (atom.pseudo === &#x27;&#x27; &#x26;&#x26; atom.mediaQuery === &#x27;&#x27;);
+		});
+
+		css = atomsToCss(molecule.className, atoms, &#x27;&#x27;) + &#x27;\n&#x27;;
+
+	//create css for atoms that have pseudo classes
+		//create array of objects { pseudo, atoms }
+		molecule.pseudoTypes.map(function (pseudo){
+			pseudoAtoms.push(makePseudoAtomList(pseudo, molecule.atoms));
+		});
+
+		pseudoAtoms.map(function (obj){
+			css += atomsToCss(molecule.className, obj.atoms, obj.pseudo) + &#x27;\n&#x27;;
+		});
+
+	//create css for atoms that have media queries and pseudo classes that are in media queries
+		//create array of objects { mediaQuery, pseudoTypes, atoms }
+		molecule.mediaQueries.map(function (mediaQuery) {
+			mediaAtoms.push({
+				mediaQuery: mediaQuery,
+				pseudoAtoms: [],
+				atoms: _.where(molecule.atoms, { mediaQuery : mediaQuery })
+			});
+		});
+
+		//create sub-arrays of atoms paired with psuedo class names
+		mediaAtoms.map(function (obj){
+			var memo = [];
+			obj.pseudoAtoms = [];
+
+			obj.atoms.map(function (atom){
+				if(!_.contains(memo, atom.pseudo) &#x26;&#x26; atom.pseudo !== &#x27;&#x27;) {
+					memo.push(atom.pseudo);
+					obj.pseudoAtoms.push(makePseudoAtomList(atom.pseudo, obj.atoms));
+				}
+			});
+		});
+
+		//generate css
+		mediaAtoms.map(function (obj){
+			mediaAtoms = obj.atoms.reduce(function (p, c) { return p + c.style + &#x27;\n&#x27;; }, &#x27;\n&#x27;);
+			css += wrapInMediaQuery(toCssClass(molecule.className, &#x27;&#x27; , mediaAtoms), obj.mediaQuery) + &#x27;\n&#x27;;
+		
+			obj.pseudoAtoms.map(function (pseObj){
+				css += wrapInMediaQuery(atomsToCss(molecule.className, pseObj.atoms, pseObj.pseudo), obj.mediaQuery) + &#x27;\n&#x27;;
+			});
+		});
+
+		return css;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	as.createFileText = function createFileText(atoms, molecules, callback) {
+		var css = &#x22;&#x22;;
+
+		css = atoms.reduce(function (p, c) { return p + cssBuilder.generateAtomCss(c) + &#x27;\n&#x27;; }, &#x27;&#x27;);
+
+		molecules.map(function (molecule){
+			css += cssBuilder.<span class="apidocCodeKeywordSpan">generateMoleculeCss</span>(molecule);
+		});
+
+		callback(css);
+	}
+
+	return as;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-atomicscss.emmet" id="apidoc.module.gulp-atomicscss.emmet">module gulp-atomicscss.emmet</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-atomicscss.emmet.defaultProfile" id="apidoc.element.gulp-atomicscss.emmet.defaultProfile">
+        function <span class="apidocSignatureSpan">gulp-atomicscss.emmet.</span>defaultProfile
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defaultProfile = function () {
+			return defaultProfile;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-atomicscss.emmet.defaultSyntax" id="apidoc.element.gulp-atomicscss.emmet.defaultSyntax">
+        function <span class="apidocSignatureSpan">gulp-atomicscss.emmet.</span>defaultSyntax
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defaultSyntax = function () {
+			return defaultSyntax;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	
+	// XXX register abbreviation filter that creates references to resources
+	// on abbreviation nodes
+	/**
+	 * @param {AbbreviationNode} tree
+	 */
+	require(&#x27;abbreviationParser&#x27;).addPreprocessor(function(tree, options) {
+		var syntax = options.syntax || emmet.<span class="apidocCodeKeywordSpan">defaultSyntax</span>();
+		matchResources(tree, syntax);
+	});
+	
+});/**
+* Pasted content abbreviation processor. A pasted content is a content that
+* should be inserted into implicitly repeated abbreviation nodes.
+* This processor powers “Wrap With Abbreviation” action
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-atomicscss.emmet.define" id="apidoc.element.gulp-atomicscss.emmet.define">
+        function <span class="apidocSignatureSpan">gulp-atomicscss.emmet.</span>define
+        <span class="apidocSignatureSpan">(name, factory)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">define = function (name, factory) {
+			// do not let redefine existing properties
+			if (!(name in modules)) {
+				modules[name] = _.isFunction(factory)
+					? this.exec(factory)
+					: factory;
+			}
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @author Sergey Chikuyonok (serge.che@gmail.com)
+ * @link http://chikuyonok.ru
+ * @memberOf __abbreviationParser
+ * @constructor
+ * @param {Function} require
+ * @param {Underscore} _
+ */
+emmet.<span class="apidocCodeKeywordSpan">define</span>(&#x27;abbreviationParser&#x27;, function(require, _) {
+	var reValidName = /^[\w\-\$\:@\!%]+\+?$/i;
+	var reWord = /[\w\-:\$@]/;
+	
+	var pairs = {
+		&#x27;[&#x27;: &#x27;]&#x27;,
+		&#x27;(&#x27;: &#x27;)&#x27;,
+		&#x27;{&#x27;: &#x27;}&#x27;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-atomicscss.emmet.exec" id="apidoc.element.gulp-atomicscss.emmet.exec">
+        function <span class="apidocSignatureSpan">gulp-atomicscss.emmet.</span>exec
+        <span class="apidocSignatureSpan">(fn, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exec = function (fn, context) {
+			return fn.call(context || global, _.bind(r, this), _, this);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		 * @param {Function} factory
+		 * @memberOf emmet
+		 */
+		define: function(name, factory) {
+			// do not let redefine existing properties
+			if (!(name in modules)) {
+				modules[name] = _.isFunction(factory)
+					? this.<span class="apidocCodeKeywordSpan">exec</span>(factory)
+					: factory;
+			}
+		},
+		
+		/**
+		 * Returns reference to Emmet module
+		 * @param {String} name Module name
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-atomicscss.emmet.expandAbbreviation" id="apidoc.element.gulp-atomicscss.emmet.expandAbbreviation">
+        function <span class="apidocSignatureSpan">gulp-atomicscss.emmet.</span>expandAbbreviation
+        <span class="apidocSignatureSpan">(abbr, syntax, profile, contextNode)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">expandAbbreviation = function (abbr, syntax, profile, contextNode) {
+			if (!abbr) return &#x27;&#x27;;
+			
+			syntax = syntax || defaultSyntax;
+//			profile = profile || defaultProfile;
+			
+			var filters = r(&#x27;filters&#x27;);
+			var parser = r(&#x27;abbreviationParser&#x27;);
+			
+			profile = r(&#x27;profile&#x27;).get(profile, syntax);
+			r(&#x27;tabStops&#x27;).resetTabstopIndex();
+			
+			var data = filters.extractFromAbbreviation(abbr);
+			var outputTree = parser.parse(data[0], {
+				syntax: syntax,
+				contextNode: contextNode
+			});
+			
+			var filtersList = filters.composeList(syntax, profile, data[1]);
+			filters.apply(outputTree, filtersList, profile);
+			return outputTree.toString();
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		}
+		return (start === &#x27;&#x27; &#x26;&#x26; end === &#x27;&#x27;) ? ele : start + ele.substr(1) + end;
+	}
+
+	function handleMultipleArgumentExpand(parts) {
+		var style = &#x27;&#x27;;
+
+		style = emmet.<span class="apidocCodeKeywordSpan">expandAbbreviation</span>(parts[0], &#x27;css&#x27;).split(&#x27;:&#x27;)[0];
+		style = style + &#x22;: &#x22; + parts.slice(1).map(extentionMapper).join(&#x27; &#x27;) + &#x27;;&#x27;;
+
+		return style;
+	}
+
+	wrapper.getStyle = function getStyle(style) {
+		return (typeof style === &#x27;string&#x27;) ? emmet.expandAbbreviation(style, &#x27;css&#x27;) : handleMultipleArgumentExpand
+(style);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-atomicscss.emmet.extend" id="apidoc.element.gulp-atomicscss.emmet.extend">
+        function <span class="apidocSignatureSpan">gulp-atomicscss.emmet.</span>extend
+        <span class="apidocSignatureSpan">(protoProps, classProps)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extend = function (protoProps, classProps) {
+			var child = inherits(this, protoProps, classProps);
+			child.extend = this.extend;
+			// a hack required to WSH inherit `toString` method
+			if (protoProps.hasOwnProperty(&#x27;toString&#x27;))
+				child.prototype.toString = protoProps.toString;
+			return child;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+  return obj;
+};
+
+// Create a (shallow-cloned) duplicate of an object.
+_.clone = function(obj) {
+  if (!_.isObject(obj)) return obj;
+  return _.isArray(obj) ? obj.slice() : _.<span class="apidocCodeKeywordSpan">extend</span>({}, obj);
+};
+
+// Invokes interceptor with the obj, and then returns obj.
+// The primary purpose of this method is to &#x22;tap into&#x22; a method chain, in
+// order to perform operations on intermediate results within the chain.
+_.tap = function(obj, interceptor) {
+  interceptor(obj);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-atomicscss.emmet.log" id="apidoc.element.gulp-atomicscss.emmet.log">
+        function <span class="apidocSignatureSpan">gulp-atomicscss.emmet.</span>log
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log = function () {
+			if (global.console &#x26;&#x26; global.console.log)
+				global.console.log.apply(global.console, arguments);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				args = _.rest(arguments);
+			}
+			
+			var action = this.get(name);
+			if (action) {
+				return action.fn.apply(emmet, args);
+			} else {
+				emmet.<span class="apidocCodeKeywordSpan">log</span>(&#x27;Action &#x22;%s&#x22; is not defined&#x27;, name);
+				return false;
+			}
+		},
+		
+		/**
+		 * Returns all registered actions as object
+		 * @returns {Object}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-atomicscss.emmet.require" id="apidoc.element.gulp-atomicscss.emmet.require">
+        function <span class="apidocSignatureSpan">gulp-atomicscss.emmet.</span>require
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function r(name) {
+		if (!(name in modules) &#x26;&#x26; moduleLoader)
+			moduleLoader(name);
+		
+		return modules[name];
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		return modules[name];
+	}
+	
+	return {
+		/**
+		 * Simple, AMD-like module definition. The module will be added into
+		 * &#x3c;code&#x3e;emmet&#x3c;/code&#x3e; object and will be available via
+		 * &#x3c;code&#x3e;emmet.<span class="apidocCodeKeywordSpan">require</span>(name)&#x3c;/code&#x3e; or &#x3c;code&#x3e;emmet[name
+]&#x3c;/code&#x3e;
+		 * @param {String} name
+		 * @param {Function} factory
+		 * @memberOf emmet
+		 */
+		define: function(name, factory) {
+			// do not let redefine existing properties
+			if (!(name in modules)) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-atomicscss.emmet.setModuleLoader" id="apidoc.element.gulp-atomicscss.emmet.setModuleLoader">
+        function <span class="apidocSignatureSpan">gulp-atomicscss.emmet.</span>setModuleLoader
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setModuleLoader = function (fn) {
+			moduleLoader = fn;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-atomicscss.emmetWrapper" id="apidoc.module.gulp-atomicscss.emmetWrapper">module gulp-atomicscss.emmetWrapper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-atomicscss.emmetWrapper.getStyle" id="apidoc.element.gulp-atomicscss.emmetWrapper.getStyle">
+        function <span class="apidocSignatureSpan">gulp-atomicscss.emmetWrapper.</span>getStyle
+        <span class="apidocSignatureSpan">(style)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getStyle(style) {
+		return (typeof style === &#x27;string&#x27;) ? emmet.expandAbbreviation(style, &#x27;css&#x27;) : handleMultipleArgumentExpand(style);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	if(parts.length &#x3e; 1){
+		stripMediaQuery();
+		stripPseudoElements();
+	}
+	else parts = parts[0];
+
+	atom.style = emmetWrapper.<span class="apidocCodeKeywordSpan">getStyle</span>(parts);
+
+	return atom;
+}
+
+/************************************************************************
+*/
+function Molecule(classes) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
